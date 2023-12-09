@@ -1,4 +1,3 @@
-// import Home from "../Page/Home/Home"
 // import About from "../Page/About/About";
 // import Setting from "../Component/setting/Setting";
 // import UserProfile from "../Component/User/UserProfile";

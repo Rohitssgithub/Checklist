@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { sideBarNavigation } from "./Navigation";
 import { NavLink } from "react-router-dom";
 import { PATH } from "../../constant/constant";
-const Sidebar = () => {
+const Sidebar = ({ increaseLengthFun, open }) => {
     const [currentPath, setCurrentPath] = useState({});
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -29,74 +29,78 @@ const Sidebar = () => {
 
     const toggleSettingsDropdown = (pageName) => {
         if (openDropdown === pageName) {
-            setOpenDropdown(null); // Close the dropdown if it's already open
+            setOpenDropdown(null);
         } else {
-            setOpenDropdown(pageName); // Open the clicked dropdown
+            setOpenDropdown(pageName);
         }
     }
 
-    // Function to close the dropdown
     const closeSettingsDropdown = () => {
         setOpenDropdown(null);
     }
 
     return (
         <>
-            <div className="container-fluid p-0">
-                <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md">
+            {/* <div className="container-fluid p-0"> */}
+            {/* <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-md">
                     <div className="container-fluid p-2">
                         <div className="form-inline me-auto">
-                            <div className="btn btn-primary" onClick={ToggleSidebar}>
+                            <div className="btn btn-primary" onClick={increaseLengthFun}>
                                 <i className="fa fa-bars"></i>
                             </div>
                         </div>
                     </div>
-                </nav>
-                <div className={`sidebars ${isOpen ? 'active' : ''}`}>
-                    <div className="sd-header">
-                        <h4 className="mb-0">Sidebar</h4>
-                        <div className="btn btn-primary" onClick={ToggleSidebar}><i className="fa fa-times"></i></div>
+                </nav> */}
+            <div className={`sidebars ${open ? ' sidebars active' : ''}`}>
+                <div className="sd-header">
+                    <div onClick={increaseLengthFun} className='openBtn'>
+                        {
+                            open ?
+                                <i class="fa-solid fa-x" style={{ color: "#eaecf0" }}></i>
+                                :
+                                <i class="fa-solid fa-bars" style={{ color: "#eaecf0" }}></i>
+                        }
                     </div>
-                    <div className="sd-body">
-                        {Object.values(PATH.privateRoutes).map((ele) => {
-                            console.log(ele.children)
-                            if (ele.children) {
-                                return (
-                                    <li key={ele.path} className="innerLink">
-                                        <span
-                                            className={`mainLinkNav ${openDropdown === ele.pageName ? 'active' : ''}`}
-                                            onClick={() => toggleSettingsDropdown(ele.pageName)}
-                                        >
-                                            {ele.pageName}
-                                        </span>
-                                        {openDropdown === ele.pageName && (
-                                            <ul className="user-settings-dropdown">
-                                                {Object.values(ele.children).map((child) => (
-                                                    <li key={child.path}>
-                                                        <NavLink
-                                                            className="linksDrop"
-                                                            to={child.path}
-                                                            onClick={closeSettingsDropdown}
-                                                        >
-                                                            {child.pageName}
-                                                        </NavLink>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </li>
-                                );
-                            } else {
-                                return (
-                                    <li key={ele.path}>
-                                        <Link className='mainLinkNav' to={ele.path}>{ele.pageName}</Link>
-                                    </li>
-                                );
-                            }
-                        })}
-                        <Link className='mainLinkNav' onClick={() => localStorage.clear()} to='/login'>Logout</Link>
-                        <ul>
-                            {/* {sideBarNavigation
+                </div>
+                <div className="sd-body">
+                    {Object.values(PATH.privateRoutes).map((ele) => {
+                        if (ele.children) {
+                            return (
+                                <li key={ele.path} className="innerLink">
+                                    <span
+                                        className={`mainLinkNav ${openDropdown === ele.pageName ? 'active' : ''}`}
+                                        onClick={() => toggleSettingsDropdown(ele.pageName)}
+                                    >
+                                        {ele.pageName}
+                                    </span>
+                                    {openDropdown === ele.pageName && (
+                                        <ul className="user-settings-dropdown">
+                                            {Object.values(ele.children).map((child) => (
+                                                <li key={child.path}>
+                                                    <NavLink
+                                                        className="linksDrop"
+                                                        to={child.path}
+                                                        onClick={closeSettingsDropdown}
+                                                    >
+                                                        {child.pageName}
+                                                    </NavLink>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            );
+                        } else {
+                            return (
+                                <li key={ele.path}>
+                                    <Link className='mainLinkNav' to={ele.path}>{ele.pageName}</Link>
+                                </li>
+                            );
+                        }
+                    })}
+                    <Link className='mainLinkNav' onClick={() => localStorage.clear()} to='/login'>Logout</Link>
+                    <ul>
+                        {/* {sideBarNavigation
                                 .map((data) => {
                                     return (
                                         <>
@@ -117,13 +121,16 @@ const Sidebar = () => {
                                 })
                             }
                             <Link className='mainLinkNav' onClick={() => localStorage.clear()} to='/login'>Logout</Link> */}
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
-                <div className={`sidebar-overlay ${isOpen ? 'active' : ''}`} onClick={ToggleSidebar}></div>
             </div>
+            {/* <div className={`sidebar-overlay ${isOpen ? 'active' : ''}`} onClick={ToggleSidebar}></div> */}
+            {/* </div> */}
         </>
     )
 }
 
 export default Sidebar;
+
+
+

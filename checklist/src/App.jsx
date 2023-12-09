@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Router, Navigate ,createBrowserRouter} from 'react-router-dom';
+import { BrowserRouter, Route, Router, Navigate, createBrowserRouter } from 'react-router-dom';
 import EnterLayout from './Pages/Layout/EnterLayout';
 import MainLayout from './Pages/Layout/MainLayoute';
 import PublicRoute from './constant/PublicRoute';
@@ -19,7 +19,7 @@ const App = () => {
             element: child.element
           })),
         {
-          path: "/login",
+          path: "/",
           element: <Navigate to={PATH.publicRoutes.LOGIN.path} />
         },
       ]
