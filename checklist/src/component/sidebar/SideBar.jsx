@@ -92,9 +92,7 @@ const Sidebar = ({ increaseLengthFun, open }) => {
                             );
                         } else {
                             return (
-                                <li key={ele.path}>
                                     <Link className='mainLinkNav' to={ele.path}>{ele.pageName}</Link>
-                                </li>
                             );
                         }
                     })}

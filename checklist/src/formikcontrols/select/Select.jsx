@@ -2,7 +2,7 @@ import React from 'react'
 import ReactSelect from 'react-select';
 import styles from "./Select.module.scss"
 import { ErrorMessage, Field } from 'formik';
-import ErrorText from 'components/shared/errortext/ErrorText';
+import ErrorText from '../errortext/ErrorText'
 
 const Select = (props) => {
     const { label, name, placeholder, isRequired, options, formik, optionsHeight, ...rest } = props

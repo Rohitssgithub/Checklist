@@ -1,10 +1,8 @@
 import React from 'react'
 import { Field, ErrorMessage } from 'formik'
 import styles from "./Textarea.module.scss"
-import ErrorText from 'components/shared/errortext/ErrorText'
-import { combineClasses } from 'utils/utils'
-// import TextError from '../shared/TextError'
-// import { TextField } from '@mui/material'
+import ErrorText from '../errortext/ErrorText'
+// import { combineClasses } from 'utils/utils'
 
 const Textarea = (props) => {
     const { label, name, icon, placeholder, className, isRequired, ...rest } = props

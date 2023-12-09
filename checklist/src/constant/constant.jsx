@@ -1,14 +1,13 @@
-// import About from "../Page/About/About";
-// import Setting from "../Component/setting/Setting";
-// import UserProfile from "../Component/User/UserProfile";
-// import SingleMoviePage from "../Component/SIngleMoviePage";
-// import UserSettings from "../Component/User/UserSetting";
-import LoginForm from "../component/Login/Login";
-import RegisterForm from "../component/RegistrationForm/Registration";
-import ForgetPassword from "../component/ForgetPassword/ForgetPassword";
-import NewPassword from "../component/NewPassword/NewPassword";
-import OtpReceiver from "../component/OtpReciver/Otpreceiver";
-import Home from "../Pages/Home/Home";
+import { lazy } from "react"
+
+const LoginForm = lazy(() => import("../component/Login/Login"))
+const RegisterForm = lazy(() => import("../component/RegistrationForm/Registration"))
+const ForgetPassword = lazy(() => import("../component/ForgetPassword/ForgetPassword"))
+const NewPassword = lazy(() => import("../component/NewPassword/NewPassword"))
+const OtpReceiver = lazy(() => import("../component/OtpReciver/Otpreceiver"))
+const Home = lazy(() => import("../Pages/Home/Home"))
+const User = lazy(() => import("../Pages/user/User"))
+
 
 export const PATH = {
     publicRoutes: {
@@ -38,6 +37,14 @@ export const PATH = {
             path: "/home",
             element: <Home />,
             pageName: "Home",
+            sidebar: {
+                show: true,
+            }
+        },
+        CRUD: {
+            path: "/user-crud",
+            element: <User />,
+            pageName: "CRUD",
             sidebar: {
                 show: true,
             }

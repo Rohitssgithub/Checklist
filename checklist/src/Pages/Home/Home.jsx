@@ -1,9 +1,10 @@
 import React from 'react'
+import TabForm from '../../component/TabForm/TabForm'
 
 const Home = () => {
   return (
     <>
-      Home
+      <TabForm></TabForm>
     </>
   )
 }

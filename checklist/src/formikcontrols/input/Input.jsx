@@ -1,7 +1,7 @@
 import React from 'react'
 import { Field, ErrorMessage } from 'formik'
 import styles from "./Input.module.scss"
-import ErrorText from 'components/shared/errortext/ErrorText'
+import ErrorText from '../errortext/ErrorText'
 
 const Input = (props) => {
     const { label, name, icon, placeholder, isRequired, type, ...rest } = props

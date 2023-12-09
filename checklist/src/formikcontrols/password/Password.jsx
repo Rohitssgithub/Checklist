@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Field, ErrorMessage } from 'formik'
 import styles from "./Password.module.scss"
-import ErrorText from 'components/shared/errortext/ErrorText'
+import ErrorText from '../errortext/ErrorText'
 import { ReactComponent as Eye } from "assets/svg/eye.svg"
 import { ReactComponent as EyeSlash } from "assets/svg/eye-slash.svg"
 // import TextError from '../shared/TextError'
