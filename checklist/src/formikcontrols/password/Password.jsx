@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Field, ErrorMessage } from 'formik'
 import styles from "./Password.module.scss"
 import ErrorText from '../errortext/ErrorText'
-import { ReactComponent as Eye } from "assets/svg/eye.svg"
-import { ReactComponent as EyeSlash } from "assets/svg/eye-slash.svg"
+// import { ReactComponent as Eye } from "assets/svg/eye.svg"
+// import { ReactComponent as EyeSlash } from "assets/svg/eye-slash.svg"
 // import TextError from '../shared/TextError'
 // import { TextField } from '@mui/material'
 
@@ -34,12 +34,12 @@ const Password = (props) => {
                                 placeholder={placeholder}
                                 type={showPassword ? "text" :"password"}
                             />
-                            {
+                            {/* {
                             showPassword ?
                             <EyeSlash onClick={toggleShowPassword} className={styles.eyeIcon}/>
                             :
                             <Eye onClick={toggleShowPassword} className={styles.eyeIcon}/>
-                            }
+                            } */}
                             </>
                         )
                     }

@@ -11,6 +11,7 @@ function TabForm() {
 
 
     const handleTabClick = (index) => {
+        console.log('index', index)
         if (index === activeTab) return;
         if (index === activeTab + 1) {
             if (activeTab + 1 >= maxTabCount) {
@@ -192,13 +193,13 @@ function TabForm() {
         <div className="tab-panel container mt-5">
             <ul className="tab-list">
                 <li
-                    className={activeTab === 0 ? "active" : ""}
+                    className={activeTab === 0 ? "active" : "activestab"}
                     onClick={() => handleTabClick(0)}
                 >
                     Tab 1
                 </li>
                 <li
-                    className={activeTab === 1 ? "active" : ""}
+                    className={activeTab === 1 ? "active" : "activestab"}
                     onClick={() => handleTabClick(1)}
                 >
                     Tab 2

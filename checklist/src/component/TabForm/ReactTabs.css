@@ -17,13 +17,26 @@ li{
   
   .tab-list li {
     cursor: pointer;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     border: none;
+    padding: 0 !important;
+    height: 30px;
+    width: 150px;
+  }
+
+  .activestab{
+    border: solid;
   }
   
   .tab-list li.active {
-    border-bottom:7px solid blue;
+    /* border-bottom:7px solid blue; */
+    /* border: solid; */
+    border-radius: 50px;
+    background-color: skyblue;
 
+  }
+  .actives{
+    border: solid;
   }
   
   .tab-content {

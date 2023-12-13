@@ -77,7 +77,6 @@ const FormA = ({ handleTabClick }) => {
                     validateOnChange
                 >
                     {formik => {
-                        // console.log(formik.isValid)
                         return (
                             <Form className='row'>
                                 {/* <div className='d-flex'> */}
@@ -164,6 +163,7 @@ const FormA = ({ handleTabClick }) => {
                                         // type='button'
                                         className='btn btn-primary'
                                         onClick={handleTabClick}
+                                        // disabled
                                         disabled={!formik.isValid}
                                     >
                                         Next
