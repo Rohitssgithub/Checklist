@@ -1,9 +1,10 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 
 const UseFrom = () => {
     const {
         register,
+        control,
         handleSubmit,
         formState: { errors },
     } = useForm({
@@ -16,15 +17,24 @@ const UseFrom = () => {
         },
     });
 
+    console.log('register', register)
+
     const onSubmit = (data) => {
         console.log(data);
     };
 
+    console.log(errors)
 
     return (
         <>
             <div>UseFrom</div>
             <form onSubmit={handleSubmit(onSubmit)}>
+                {/* <Controller
+                    name="name"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => <input {...field} />}
+                /> */}
                 <input
                     {...register('firstName', { required: 'First name is required' })}
                     placeholder="First name"
