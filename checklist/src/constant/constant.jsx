@@ -37,6 +37,7 @@ export const PATH = {
             path: "/home",
             element: <Home />,
             pageName: "Home",
+            icon:'',
             sidebar: {
                 show: true,
             }
@@ -45,6 +46,7 @@ export const PATH = {
             path: "/user-crud",
             element: <User />,
             pageName: "CRUD",
+            icon:'',
             sidebar: {
                 show: true,
             }

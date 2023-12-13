@@ -4,6 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 import { sideBarNavigation } from "./Navigation";
 import { NavLink } from "react-router-dom";
 import { PATH } from "../../constant/constant";
+
+import { FaHome } from "react-icons/fa";
+
 const Sidebar = ({ increaseLengthFun, open }) => {
     const [currentPath, setCurrentPath] = useState({});
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -92,10 +95,14 @@ const Sidebar = ({ increaseLengthFun, open }) => {
                             );
                         } else {
                             return (
+                                <>
+                                    <FaHome />
                                     <Link className='mainLinkNav' to={ele.path}>{ele.pageName}</Link>
+                                </>
                             );
                         }
                     })}
+
                     <Link className='mainLinkNav' onClick={() => localStorage.clear()} to='/login'>Logout</Link>
                     <ul>
                         {/* {sideBarNavigation

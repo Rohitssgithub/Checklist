@@ -39,6 +39,7 @@ ul {
   width: 25%;
   position: relative;
   z-index: 2;
+  border: solid;
 }
 
 .tabs--list a {

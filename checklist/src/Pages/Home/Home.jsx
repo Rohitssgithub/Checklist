@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import TabForm from '../../component/TabForm/TabForm'
 import './Home.css';
+import UseCallBack from '../../component/Hooks/UseCallBack';
+import UseFrom from '../../component/Hooks/UseForm';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,9 +18,10 @@ const Home = () => {
 
   return (
     <>
+    <UseFrom></UseFrom>
       {/* <TabForm></TabForm> */}
       <>
-        <div className="tabs">
+        {/* <div className="tabs">
           <ul className="tabs--list">
             {[...Array(4)].map((_, index) => (
               <li key={index}
@@ -38,7 +41,7 @@ const Home = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </>
     </>
   );
