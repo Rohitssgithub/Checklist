@@ -3,7 +3,8 @@ import TabForm from '../../component/TabForm/TabForm'
 import './Home.css';
 import UseCallBack from '../../component/Hooks/UseCallBack';
 import UseFrom from '../../component/Hooks/UseForm';
-
+import ComA from '../../component/Hooks/higherordercomponent/ComA';
+import ComB from '../../component/Hooks/higherordercomponent/ComB';
 const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [movingTabStyle, setMovingTabStyle] = useState({});
@@ -18,6 +19,8 @@ const Home = () => {
 
   return (
     <>
+    {/* <ComA></ComA>
+    <ComB></ComB> */}
     <UseFrom></UseFrom>
       {/* <TabForm></TabForm> */}
       <>
