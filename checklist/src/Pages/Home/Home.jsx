@@ -5,6 +5,7 @@ import UseCallBack from '../../component/Hooks/UseCallBack';
 import UseFrom from '../../component/Hooks/UseForm';
 import ComA from '../../component/Hooks/higherordercomponent/ComA';
 import ComB from '../../component/Hooks/higherordercomponent/ComB';
+import MusicPlayer from '../../component/musicplayer/MusicPlayer';
 const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [movingTabStyle, setMovingTabStyle] = useState({});
@@ -19,9 +20,10 @@ const Home = () => {
 
   return (
     <>
-    {/* <ComA></ComA>
+      <MusicPlayer></MusicPlayer>
+      {/* <ComA></ComA>
     <ComB></ComB> */}
-    <UseFrom></UseFrom>
+      {/* <UseFrom></UseFrom> */}
       {/* <TabForm></TabForm> */}
       <>
         {/* <div className="tabs">
