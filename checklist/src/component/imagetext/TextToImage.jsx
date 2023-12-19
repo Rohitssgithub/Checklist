@@ -12,10 +12,9 @@ const TextToImageConverter = () => {
             html2canvas(textElement)
                 .then((canvas) => {
                     const imageDataUrl = canvas.toDataURL('image/png');
-
+                    console.log('imageDataUrl', imageDataUrl)
                     const imgElement = new Image();
                     imgElement.src = imageDataUrl;
-
                     document.body.appendChild(imgElement);
                 })
                 .catch((error) => {
