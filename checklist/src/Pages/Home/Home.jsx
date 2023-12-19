@@ -8,6 +8,7 @@ import ComB from '../../component/Hooks/higherordercomponent/ComB';
 import MusicPlayer from '../../component/musicplayer/MusicPlayer';
 import InputField from '../../component/input/Input';
 import ImageTextExtractor from '../../component/imagetext/ImageText';
+import TextToImageConverter from '../../component/imagetext/TextToImage';
 const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [movingTabStyle, setMovingTabStyle] = useState({});
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <>
       <ImageTextExtractor />
+      <TextToImageConverter/>
       {/* <InputField /> */}
       {/* <MusicPlayer></MusicPlayer> */}
       {/* <ComA></ComA>
