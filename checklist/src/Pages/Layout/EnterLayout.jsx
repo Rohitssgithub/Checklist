@@ -17,26 +17,26 @@ const EnterLayout = () => {
     }, []);
     return (
         <>
-            {loading ? (
+            {/* {loading ? (
                 <div className={styles.loader}>
                     Loading...
                 </div>
-            ) : (
-                <div className={styles.mainContainer}>
-                    <div className='row'>
-                        <div className='col-6'>
-                            <LayoutCommon />
-                        </div>
-                        <div className='col-6'>
-                            <div className={styles.logins}>
-                                <div className={styles.loginDiv}>
-                                    <Outlet />
-                                </div>
+            ) : ( */}
+            <div className={styles.mainContainer}>
+                <div className='row'>
+                    <div className='col-6'>
+                        <LayoutCommon />
+                    </div>
+                    <div className='col-6'>
+                        <div className={styles.logins}>
+                            <div className={styles.loginDiv}>
+                                <Outlet />
                             </div>
                         </div>
                     </div>
                 </div>
-            )}
+            </div>
+            {/* )} */}
         </>
     )
 }
