@@ -6,6 +6,8 @@ import UseFrom from '../../component/Hooks/UseForm';
 import ComA from '../../component/Hooks/higherordercomponent/ComA';
 import ComB from '../../component/Hooks/higherordercomponent/ComB';
 import MusicPlayer from '../../component/musicplayer/MusicPlayer';
+import InputField from '../../component/input/Input';
+import ImageTextExtractor from '../../component/imagetext/ImageText';
 const Home = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [movingTabStyle, setMovingTabStyle] = useState({});
@@ -20,6 +22,8 @@ const Home = () => {
 
   return (
     <>
+      <ImageTextExtractor />
+      {/* <InputField /> */}
       {/* <MusicPlayer></MusicPlayer> */}
       {/* <ComA></ComA>
     <ComB></ComB> */}
