@@ -7,6 +7,7 @@ const NewPassword = lazy(() => import("../component/NewPassword/NewPassword"))
 const OtpReceiver = lazy(() => import("../component/OtpReciver/Otpreceiver"))
 const Home = lazy(() => import("../Pages/Home/Home"))
 const User = lazy(() => import("../Pages/user/User"))
+import { IoIosHome } from "react-icons/io";
 
 
 export const PATH = {
@@ -21,7 +22,8 @@ export const PATH = {
         },
         FORGOT_PASSWORD: {
             path: "/forget-password",
-            element: <ForgetPassword />
+            element: <ForgetPassword />,
+
         },
         OTP_RECIVER: {
             path: '/otp-recive',
@@ -37,16 +39,16 @@ export const PATH = {
             path: "/home",
             element: <Home />,
             pageName: "Home",
-            icon:'',
-            sidebar: {
-                show: true,
-            }
+            icon: <IoIosHome />,
+            // sidebar: {
+            //     show: true,
+            // }
         },
         CRUD: {
             path: "/user-crud",
             element: <User />,
             pageName: "CRUD",
-            icon:'',
+            icon: <IoIosHome />,
             sidebar: {
                 show: true,
             }

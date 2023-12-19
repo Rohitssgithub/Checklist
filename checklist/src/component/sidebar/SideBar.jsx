@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { sideBarNavigation } from "./Navigation";
 import { NavLink } from "react-router-dom";
 import { PATH } from "../../constant/constant";
-
+import { IoIosHome } from "react-icons/io";
 import { FaHome } from "react-icons/fa";
 
 const Sidebar = ({ increaseLengthFun, open }) => {
@@ -85,7 +85,7 @@ const Sidebar = ({ increaseLengthFun, open }) => {
                                                         to={child.path}
                                                         onClick={closeSettingsDropdown}
                                                     >
-                                                        {child.pageName}
+                                                        {/* {child.pageName} */}
                                                     </NavLink>
                                                 </li>
                                             ))}
@@ -96,7 +96,6 @@ const Sidebar = ({ increaseLengthFun, open }) => {
                         } else {
                             return (
                                 <>
-                                    <FaHome />
                                     <Link className='mainLinkNav' to={ele.path}>{ele.pageName}</Link>
                                 </>
                             );

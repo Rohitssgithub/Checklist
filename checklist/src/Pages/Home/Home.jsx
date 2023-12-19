@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <MusicPlayer></MusicPlayer>
+      {/* <MusicPlayer></MusicPlayer> */}
       {/* <ComA></ComA>
     <ComB></ComB> */}
       {/* <UseFrom></UseFrom> */}
